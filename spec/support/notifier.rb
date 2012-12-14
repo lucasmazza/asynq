@@ -3,8 +3,9 @@ class Notifier < ActionMailer::Base
 
   layout false
 
-  def contact(recipient)
+  def contact(recipient, name)
     @recipient = recipient
-    mail :to => @recipient
+    @name      = name
+    mail :to => @recipient, :from => "async@test"
   end
 end

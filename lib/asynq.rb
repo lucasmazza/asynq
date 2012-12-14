@@ -1,5 +1,4 @@
 require "action_mailer"
-require "mail"
 require "qu"
 
 require "asynq/version"
