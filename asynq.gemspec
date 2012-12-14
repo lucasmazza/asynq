@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency 'actionmailer', '~> 3.2.9'
-  gem.add_dependency 'qu', '~> 0.2.0'
+  gem.add_dependency 'qu',           '~> 0.2.0'
 
   gem.add_development_dependency 'rspec', '~> 2.12.0'
 end

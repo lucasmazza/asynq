@@ -6,6 +6,7 @@ require "support/qu"
 Qu.backend = Qu::Backend::Test.new
 
 ActionMailer::Base.delivery_method = :asynq
+ActionMailer::Base.asynq_settings[:using] = :test
 ActionMailer::Base.perform_deliveries = true
 
 RSpec.configure do |config|
@@ -18,9 +19,5 @@ RSpec.configure do |config|
     ActionMailer::Base.deliveries.clear
   end
 
-  # Run specs in random order to surface order dependencies. If you find an
-  # order dependency and want to debug it, you can fix the order by providing
-  # the seed, which is printed after each run.
-  #     --seed 1234
   config.order = 'random'
 end
