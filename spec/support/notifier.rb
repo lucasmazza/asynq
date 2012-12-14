@@ -6,6 +6,6 @@ class Notifier < ActionMailer::Base
   def contact(recipient, name)
     @recipient = recipient
     @name      = name
-    mail :to => @recipient, :from => "async@test"
+    mail :to => @recipient, :from => "asynq@test.com"
   end
 end

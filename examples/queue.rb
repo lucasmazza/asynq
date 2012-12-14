@@ -18,5 +18,5 @@ loop do
   mail = Notifier.contact(email, name)
   mail.deliver
   puts "delivering..."
-  sleep 10
+  sleep 5
 end
