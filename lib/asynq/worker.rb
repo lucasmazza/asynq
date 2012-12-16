@@ -8,9 +8,10 @@ module Asynq
 
     def self.perform(contents, options)
       message = Mail.new(contents)
-      delivery_options = options["delivery_options"] || {}
+      options.symbolize_keys!
+      delivery_options = options[:delivery_options] || {}
 
-      klass = ActiveSupport::Inflector.constantize(options["delivery_method"])
+      klass = ActiveSupport::Inflector.constantize(options[:delivery_method])
       message.delivery_method(klass, delivery_options.symbolize_keys)
       message.deliver
     end

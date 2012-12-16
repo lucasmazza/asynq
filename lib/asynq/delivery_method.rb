@@ -3,7 +3,7 @@ module Asynq
     def initialize(options)
       method   = options[:using]
       @worker  = options[:worker]
-      @klass   = ActionMailer::Base.delivery_methods[method]
+      @klass   = ActionMailer::Base.delivery_methods[method].to_s
       @options = ActionMailer::Base.send(:"#{method}_settings")
     end
 
