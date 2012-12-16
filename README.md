@@ -27,7 +27,7 @@ config.action_mailer.smtp_settings = {
 }
 ```
 
-Asynq is backed by [Qu](github.com/bkeepers/qu), so it's important to setup an initializer to configure it properly.
+Asynq is backed by [Qu](http://github.com/bkeepers/qu), so it's important to setup an initializer to configure it properly.
 
 ```ruby
 # config/initializers/qu.rb
