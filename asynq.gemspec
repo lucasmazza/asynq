@@ -10,6 +10,8 @@ Gem::Specification.new do |gem|
   gem.email         = ["lucastmazza@gmail.com"]
   gem.description   = %q{Asynchronous delivery of pre rendered e-mails}
 
+  gem.bindir        = ["bin"]
+  gem.executables   = ["asynq"]
   gem.files         = Dir["CHANGELOG.md", "LICENSE", "README.md", "lib/**/*"]
   gem.test_files    = Dir["spec/**/*.rb"]
   gem.require_paths = ["lib"]
@@ -19,5 +21,4 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'qu',            '~> 0.2.0'
 
   gem.add_development_dependency 'rspec', '~> 2.12.0'
-  gem.add_development_dependency 'qu-redis', '~> 0.2.0'
 end
