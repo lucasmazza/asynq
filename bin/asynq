@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-require "asynq/cli"
+require 'asynq/cli'
 
 Asynq::CLI.new.run(ARGV)

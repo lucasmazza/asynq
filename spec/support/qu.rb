@@ -1,4 +1,4 @@
-require "qu-immediate"
+require 'qu-immediate'
 
 module Qu
   module Backend

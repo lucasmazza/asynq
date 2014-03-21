@@ -8,7 +8,7 @@ module Asynq
     end
 
     def deliver!(mail)
-      Qu.enqueue @worker, mail.encoded, :delivery_method => @klass, :delivery_options => @options
+      Qu.enqueue @worker, mail.encoded, delivery_method: @klass, delivery_options: @options
     end
   end
 end

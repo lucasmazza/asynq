@@ -17,13 +17,13 @@ Add `asynq` to your Gemfile, and setup in your appliction the proper ActionMaile
 ```ruby
 # config/environments/production.rb
 config.action_mailer.smtp_settings = {
-  :address              => "...",
-  :port                 => 587,
-  :user_name            => "...",
-  :password             => "...",
-  :authentication       => "...",
-  :enable_starttls_auto => true,
-  :domain               => "..."
+  address:              "...",
+  port:                 587,
+  user_name:            "...",
+  password:             "...",
+  authentication:       "...",
+  enable_starttls_auto: true,
+  domain:               "..."
 }
 ```
 
@@ -52,8 +52,9 @@ The `examples` directory provides small scripts to try out Asynq using `qu-redis
 by enqueuing a few e-mails locally in Redis and delivering them to an SMTP server managed by MailCatcher.
 
 ```shell
+gem install mailcatcher
+mailcatcher
 bundle install
-bundle exec mailcatcher
 bundle exec examples/queue.rb
 bundle exec asynq -r examples/setup.rb
 ```
@@ -62,4 +63,4 @@ Open up [http://localhost:1080](http://localhost:1080) and see the delivered e-m
 
 ## License
 
-Copyright (c) 2012 Lucas Mazza. See LICENSE file.
+Copyright (c) 2012-2014 Lucas Mazza. See LICENSE file.
